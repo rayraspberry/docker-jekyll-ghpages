@@ -26,7 +26,7 @@ To build the Docker Image and Container
 
 *** 
 `make start`
-To launch the Documentation Service
+To launch Jekyll
 
 Open a browser to [local documentation site](http://localhost:4000)
 
@@ -43,11 +43,31 @@ To stop the development environment
 To rebuild the local development environment
 
 ***
-`make clean`
-To clean image and container files
+`make open`
+Open an interactive terminal in the container
 
+***
+`make jekyll`
+run Jekyll on port 4000
+
+***
+`make new`
+create a new empty default site and configuration
+
+***
+`make wipe`
+Erase default site files
 
 *** 
+`make pre`
+Clear WSL Zone files
+https://cloudbytes.dev/snippets/wsl2-find-and-delete-zoneidentifier-files
+
+***
+`make clean`
+Delete the Docker Container and Image
+
+***
 
 ## For Reference
 
