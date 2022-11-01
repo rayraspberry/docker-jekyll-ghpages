@@ -19,6 +19,13 @@ Built with Github Pages and [Jekyll](https://jekyllrb.com/)
 
 ### Clone Template Repo
 
+### Update the _config.yml with your information
+
+1. Update the `url:` with your github address: `https://username.github.io`
+
+1. Update `basepath:` with a backslash and the name of your repo: `\blog`
+
+
 ### From the cloned repo directory
 
 `make build`

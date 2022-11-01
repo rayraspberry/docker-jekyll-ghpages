@@ -4,15 +4,17 @@ description: "Using Jekyll with Just-the-Docs theme"
 logo: "/assets/images/logo.png"
 
 # Start Unique to the Local Configuration Settings
-# Theme
 theme: "just-the-docs"
-# use 
-#remote_theme: just-the-docs/just-the-docs@v0.4.0.rc3
 baseurl: ""
 url: ""
 host: 0.0.0.0
-
 # End Unique Settings for Local
+
+
+# Start Unique Config to the Github (_config.yml) Configuration Settings
+# use remote_theme for _config.yml
+# remote_theme: just-the-docs/just-the-docs@v0.4.0.rc3
+# End Unique Config to the Github (_config.yml) Configuration Settings
 
 color_scheme: dark # or light
 
@@ -41,7 +43,7 @@ aux_links:
   "Github":
     - "//github.com/rayraspberry/docker-jekyll-ghpages/"
 
-aux_links_new_tab: true
+aux_links_new_tab: true # or false
 
 # Footer content
 # appears at the bottom of every page's main content

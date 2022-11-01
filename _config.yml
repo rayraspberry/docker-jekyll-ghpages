@@ -4,9 +4,6 @@
 # which you are expected to set up once and rarely edit after that. If you find
 # yourself editing this file very often, consider using Jekyll's data files
 # feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -19,15 +16,17 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://username.github.io/repo/
+baseurl: "/repository_name" # the subpath of your site, e.g. /blog
+url: "yourusername.github.io" # the base hostname & protocol for your site, e.g. http://username.github.io
+
 twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
+remote_theme: just-the-docs/just-the-docs@v0.4.0.rc3
 markdown: kramdown
 #theme: minima
-remote_theme: just-the-docs/just-the-docs@v0.4.0.rc3
+
 
 plugins:
   - jekyll-default-layout
