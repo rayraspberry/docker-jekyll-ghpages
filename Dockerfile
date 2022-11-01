@@ -4,7 +4,7 @@
 FROM ruby:2.7-alpine3.15
 # FROM ruby:3.0.3-alpine3.15
 
-WORKDIR /workspaces/jekyll
+WORKDIR /workspaces/jekyll-site
 
 # Add Jekyll dependencies to Alpine
 RUN apk update
@@ -15,9 +15,9 @@ RUN gem update bundler && gem install bundler jekyll
 
 # Copy Gemfiles or build them
 # build
-RUN bundle init
+# RUN bundle init
 # copy
-# COPY Gemfiles* ./
+COPY Gemfiles* ./
 
 bundle add jekyll --version "3.9.2"
 
@@ -30,4 +30,3 @@ bundle exec jekyll new --force --skip-bundle .
 bundle add webrick
 bundle install
 bundle update
-
