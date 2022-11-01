@@ -40,8 +40,9 @@ gem "kramdown-parser-gfm"
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-gem "webrick", "~> 1.7"
+gem "jekyll-seo-tag", "~> 2.8"
 
+gem "rake", "~> 13.0"
 gem "just-the-docs", "= 0.4.0.rc3"
 
 gem "jekyll-default-layout", "~> 0.1.5"

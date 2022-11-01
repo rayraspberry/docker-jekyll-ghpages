@@ -13,7 +13,7 @@ start:
 
 	@echo "Jekyll service is starting... please wait 10 seconds."
 	@echo "Open http://localhost:4000/ in your preferred web browser."
-	
+
 stop: 
 ##	docker-compose stop
 	docker stop github-site
@@ -29,6 +29,17 @@ open:
 
 jekyll:
 	docker exec -it -w /workspaces/site github-site sh -c "bundle exec jekyll serve --host 0.0.0.0 --config _config_local.yml"
+
+new:
+	docker exec -it -w /workspaces/site github-site sh -c "bundle exec jekyll new --force --skip-bundle ."
+
+wipe:
+	make start
+	docker exec -it -w /workspaces/site github-site sh -c "./wipe_site.sh"
+	make stop
+
+prep:
+	docker exec -it -w /workspace/site github-site sh -c "find . -name "*:Zone.Identifier" -type f -delete"
 
 clean: 
 	docker rm -f github-site

@@ -10,22 +10,25 @@ WORKDIR /workspaces/site
 RUN apk update
 RUN apk add --no-cache build-base gcc cmake git
 
-# Update the Ruby bundler and install Jekyll
-RUN gem update bundler && gem install bundler jekyll
-
 # Copy Gemfiles or build them
 # build
 # RUN bundle init
 # copy
-COPY Gemfiles* ./
+COPY Gemfile* ./
 
-# RUN bundle add jekyll --version "3.9.2"
+# Update the Ruby bundler and install Jekyll
+RUN gem update bundler
+RUN gem install bundler jekyll
+#RUN gem install "just-the-docs" 
+RUN gem install just-the-docs --version '0.4.0.rc3'
+RUN gem update
 
-RUN bundle install 
+RUN bundle add jekyll --version "~>3.9.2"
+RUN bundle add webrick
+
+RUN bundle install
 RUN bundle update
 
 # build the new Jekyll site framework
-RUN bundle exec jekyll new --force --skip-bundle .
-RUN bundle add webrick
-RUN bundle install
-RUN bundle update
+# RUN bundle exec jekyll new --force --skip-bundle .
+# build the new website from make instead using `make new`
