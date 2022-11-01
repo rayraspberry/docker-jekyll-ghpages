@@ -32,7 +32,7 @@ Open a browser to [local documentation site](http://localhost:4000)
 
 ***
 
-#### Other Commands
+### Other Commands
 
 `make stop`
 
